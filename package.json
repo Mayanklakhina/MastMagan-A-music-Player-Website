@@ -1,0 +1,19 @@
+{
+  "name": "musicplayer",
+  "version": "1.0.0",
+  "description": "Music player Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"Music",
+    "online",
+    "favourites\""
+  ],
+  "author": "Mayank Lakhina",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
