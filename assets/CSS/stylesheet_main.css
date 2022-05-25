@@ -1,0 +1,926 @@
+/*:root{
+    --theme:#262835;
+    /*#292424;*/
+
+    body{
+        margin: 0px;
+        font-family: spotify-circular,Helvetica,Arial,sans-serif;
+        color:white;
+        background-image:url("/Images/hello.jpg");
+        /*#1e211e;*/
+         /*linear-gradient(#1e1f35,#49c34e);*/
+    }
+    /*Just removing all the styles from anchor tag and formatting em white*/
+    a{
+        text-decoration: none;
+        color : white;
+    }
+    
+    .flex-properties{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  /*default value*/
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+      
+    }
+    /*Just adding the general properties into the navigation-bar.*/
+    .navigation-bar{
+        height: auto;
+        width: auto;
+        background: black;
+        background-attachment: fixed;
+        /*transition: all 0.5s ease-in-out;*/
+    }
+    .navigation-content div{
+        display:inline-block;
+        margin:5px 5px;
+    }
+    
+    @keyframes rotating{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .web-logo img{
+      height: 60px;
+      width:  60px;
+      border-radius: 50%;
+      vertical-align: middle;
+      animation-name: rotating;
+      animation-timing-function: ease-in-out;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    .web-logo span{
+        font-size: 2vw;
+        font-weight: bold;
+        margin-bottom: 50px;
+        position: relative;
+        left: 2%;
+        vertical-align: middle;
+    }
+    /*All the divs in the navigation content is having the display property as inline-block*/
+    
+    
+    /*Favourite Button*/
+    .favourite-btn span i{
+        margin-left: 3px;
+    }
+    
+    .favourite-btn span a{
+        font-size: 1.3vw;
+        margin-left: 50px;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    .nav-hovering a:hover{                  
+        color:#69ec69;
+    }
+    
+    /*Search part*/
+    .search-bar input{
+        margin-left: 22vw;
+        border-radius: 0.9rem;
+        font-size: 1.2vw;
+        width: 21.7vw;
+        height: 2.3vw;
+        padding-left: 30px;
+        vertical-align: middle;
+        border:none;
+        text-decoration: none;
+    
+    }
+    .search-bar i{
+        position: relative;
+        left:50.5%;
+        font-size: 20px;
+        color: green;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    input:focus {
+        outline: none;
+    }
+    /*Notification Bell*/
+    @keyframes moving_bell {
+        0% {
+            transform: rotate(-15deg);
+        }
+        50% {
+            transform: rotate(15deg);
+        }
+        100% {
+            transform: rotate(-15deg);
+        }
+    }
+    .notification-bell i{
+        color:white;
+        font-size:2vw; 
+        margin-left: 15px;
+        vertical-align: middle;
+        cursor: pointer;
+        animation-name: moving_bell;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+    
+    }
+    
+    .slash h1{
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    /*Login button*/
+    .login-btn{
+        background: #408a43;
+        border-radius: 0.3rem;
+        height: 2vw;
+        border:#408a43;
+        margin-left: 15px;
+    }
+    .login-btn  a{
+        font-size: 1.3vw;
+        /*margin-left: 15px;*/
+        font-weight: bold;
+        vertical-align: middle;
+        padding:5px;
+    }
+    .login-btn:hover{
+        background:#08610c;
+        /*#408a43 ;*/
+    }
+    
+    /*Sign up button*/
+    .signup-btn{
+        background:#bb4840;
+        /*#dc291c;*/
+        border-radius: 0.3rem;
+        height:1.7rem;
+        border:#bb4840;
+    }
+    .signup-btn  a{
+        font-size: 1.3vw;
+        /*margin-left: 15px;*/
+        font-weight: bold;
+        vertical-align: middle;
+        padding:5px;
+    }
+    .signup-btn:hover{
+        background: #dc291c;
+        /*#bb4840;*/
+    }
+    /*Navigation bar part is completed...*/
+    
+    /*Main Section*/
+    main{
+        width: 100%;
+        
+        padding: 0% 1%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: all ease-in-out 1s;
+    
+    }
+    .aside{
+        display: inline-block;
+        overflow:hidden;
+        margin-right: 10px;
+    }
+    .section-a{
+        width: 70%;
+        height:86vh;
+        overflow:scroll;
+        overflow-x:hidden;
+    }
+    .section-a::-webkit-scrollbar{
+        display: none;
+    }
+    .outer-images-carousel{
+        position: relative;
+        left:8vw;
+        top: 8vh;
+    }
+    
+    .outer-images{
+        position: absolute;
+        left: 4%;
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        overflow: visible;
+        justify-content: space-around;
+    }
+    
+    .outer-images img{
+        height: 17vw;
+        width:23vw;
+        border-radius: 0.8rem;
+    }
+    /*Animation for top images*/
+    .outer-images img:hover{
+        width: 28vw;
+        height: 20vw;
+        box-shadow: 0px 0px 12px 0.1px black;
+        transition: all ease-in-out 0.5s;
+        z-index: 4;
+    }
+    .outer-images img:nth-child(1) {
+        position: relative;
+        left: 41vw;
+        z-index: 2;
+    }
+    /* image which is in the maddle of the carousel */
+    .outer-images img:nth-child(2) {
+        z-index: 3;
+    }
+    /* third image in the carousel */
+    /* if you see it direction wise, then it is the first image in the carousel */
+    .outer-images img:nth-child(3) {
+        position: relative;
+        right: 41vw;
+        z-index: 1;
+    }
+    
+    
+    
+    /*Latest Songs Lists*/
+    .heading-of-each-part h3{
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    .latest-songs{
+        position: relative;
+        top: 27vw;
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        /*border: 1px solid white;*/
+    }
+    
+    .latest-songs-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .latest-songs-content>div {
+        /*border: 1px solid white;*/
+        height: 100px;
+        width: 47%;
+        margin: 5px 0px;
+    }
+    .songs{
+        display: flex;
+        flex-direction: row;
+        /*display: inline-block;*/
+        transition: box-shadow ease-in-out 0.1s;
+    
+    }
+    /*Hovering effects*/
+    .songs img:hover{
+        box-shadow: 0px 0px 2px 1px white;
+    }
+    /*General properties for the images for first song*/
+    .songs img{
+      height: 100px;
+      width:  100px;
+      border-radius: 0.3rem;
+    }
+    .song-details p{
+        font-size: 12px;
+    }
+    .play-btn {
+        width: 100%;
+        height: 65%;
+        position: relative;
+        top: -105%;
+        color: rgba(255, 255, 255, 0);
+        /* note that its opacity will be 0 normally */
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 20px;
+        padding-top: 15%;
+        text-align: center;
+        z-index: 5;
+        transition: all ease-in-out 0.1s;
+    }
+    /* actual play icon from font awesome */
+    .play-btn i {
+        padding-top: 20%;
+    }
+    /* hovering effect for the play button */
+    .play-btn:hover {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .song-details{
+        margin: auto 10%;
+    }
+    /*Now we have created a class "options" and to see the dropdown menu we have to click on it*/
+    .options{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        text-align: right;
+        margin-left: auto;
+        margin-right: 2%;
+        margin-top: 2%;
+    
+    
+    }
+    .checkbox-dropdown{
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        width: 0px;
+        height: auto;
+        top: 20px;
+        right: 0px;
+        overflow: hidden;
+        border: 1px solid white;
+        box-shadow: 0px 0px 2px 1px black;
+        transition: all ease-in-out 0.3s;
+    
+    }
+    .fa-ellipsis-h{
+        cursor: pointer;
+    }
+    input[type="checkbox"]{
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .checkbox-dropdown {
+        width: max-content;
+        height: auto;
+        opacity: 1;
+        padding: 5px;
+    }
+    /* options in the lastest release drop down */
+    .dropdown-items p {
+        font-weight: bold;
+        font-size: 1.1vw;
+        text-align: center;
+        cursor: pointer;
+        color: black;
+    }
+    
+    
+    /*Popular Artists Part*/
+    .popular-artists{
+        position: relative;
+        top:27vw;
+        height: auto;
+        width: 100%;
+    }
+    /*Container for the popular artists*/
+    .popular-artist-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .popular-artists div p{
+        margin-left: 5px;
+        text-align: center;
+    }
+    
+    /*images in the popular artists content*/
+    .popular-artist-content div img{
+        height:10vw;
+        width:10vw;
+        border-radius: 50%;
+        min-height: 60px;
+        min-width: 60px;
+        /*margin-left: 15px;*/
+    }
+    .popular-artist-content div img:hover{
+        cursor: pointer;
+    }
+    .popular-artist-content > a > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .popular-artist-content > a > div > div {
+        position: absolute;
+        display: flex;
+        top: 0px;
+        width: 10vw;
+        min-width: 60px;
+        min-height: 60px;
+        height: 10vw;
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+        opacity: 0;
+        transition: opacity ease-in-out 0.1s;
+    }
+    /* additional icons in this section */
+    .popular-artist-content a div div i {
+        margin: auto;
+        font-size: 3vw;
+        opacity: 0;
+        transition: opacity ease-in-out 0.2s;
+    } /* added hovering effects */
+    .popular-artist-content a div div:hover {
+        opacity: 0.5;
+    }
+    .popular-artist-content a div div:hover i {
+        opacity: 1;
+    }
+    
+    /*Music Themes Part*/
+    .music-themes{
+        position: relative;
+        top:29vw;
+        left: 1vw;
+        height: auto;
+        width: 100%;
+        background-image:linear-gradient(#0d031f,#263822);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        /*border: 1px solid white;*/
+    }
+    .station{
+        margin: 30px 10px 30px 0px;
+    }
+    .div-1{
+        width:12vw;
+        height: 8vw;
+        background-color: #6f6061;
+    }
+    .div-2{
+        position: relative;
+        width: 10vw;
+        height: 10vw;
+        left:1vw;
+        top:-1vw;
+        background-color: #a76d60;
+    }
+    .div-3 {
+        position: relative;
+        width: 8vw;
+        height: 12vw;
+        left:1vw;
+        top:-1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e6c17c;
+    }
+    .div-3 img{
+        height:3vw;
+        width: 3vw;
+        border-radius: 50%;
+    }
+    .div-3 p{
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: black;
+    }
+    .music-themes div img{
+       width:8vw;
+       height: 8vw;
+       border-radius: 50%;
+       opacity: 0.7;
+    }
+    .music-theme-content{
+        margin:3%;
+        height: 8vw;
+        width: 8vw;
+        text-align: center;
+        /*border-radius: 100%;*/
+    }
+    .music-theme-content p{
+        font-size: 1.3vw;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        top:-10vw;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        /*border-radius: 100%;*/
+    }
+    /*Container for the main music themes*/
+    
+    .music-theme-content p:hover{
+        opacity: 0.7;
+        cursor:pointer;
+        
+    }
+    /*Another music theme*/
+    .main-music-theme{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .music-theme-2{
+        height: 50px;
+        width: 100%;
+        /*border: 1px solid white;*/
+        position: relative;
+        left:0.7vw;
+        top:31vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+    }
+    /*This is the outer div lets say which contain the images and text*/
+    .music-content-1{
+       width:20vw;
+       height:13vw;
+       min-width: 123px;
+       min-height: 82px;
+       overflow:hidden;
+       cursor: pointer;
+       margin:10px;
+    }
+    /*And this the inner div lets say*/
+    .music-content-2{
+        width:100%;
+        height:100%;
+        background-color: #383636;
+        background-position: center;
+        background-size: cover;
+        
+        /*transition: all ease-in-out 0.3s;*/
+    }
+    /*Adding three different themes*/
+    .music-theme-2 .music-content-1:nth-child(1) .music-content-2 {
+        background-image: url("/Images/electro.jpg");
+    }
+    .music-theme-2 .music-content-1:nth-child(2) .music-content-2{
+        background-image: url("/Images/party.jpg");
+    }
+    .music-theme-2 .music-content-1:nth-child(3) .music-content-2 {
+        background-image: url("/Images/road.jpg");
+    }
+    
+    .music-content-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    /*adjusting text styles*/
+    .music-content-1 .music-content-2 span{
+        font-weight: bold;
+        font-size: 1.5vw;
+    }
+    /*Hovering effects*/
+    .music-content-1 .music-content-2{
+        transition: all ease-in-out 0.2s;
+    }
+    .music-content-1:hover .music-content-2{
+        transform: scale(1.1);
+    }
+    
+    .music-content-1  .music-content-2 span{
+        transform: scale(1);
+        transition: all ease-in-out 0.5s;
+    }
+    
+    .music-content-1:hover .music-content-2 span{
+        transform: scale(0.9);
+    }
+    
+    /*Language Part*/
+    
+    .latest{
+        width:100%;
+        height: auto;
+        position: relative;
+        top:42vw;
+        left:0px;
+        /*border: 1px solid white;*/
+    }
+    .latest-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .latest div img{
+        width:10vw;
+        min-width: 70px;
+        height: 10vw;
+        min-height: 70px;
+        border-radius: 0.4rem;
+        transition: all ease-in-out 0.1s;
+    }
+    .latest div img:hover{
+        opacity: 0.6;
+        cursor:pointer;
+    }
+    
+    .latest-content div p{
+        font-size: 1vw;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .latest-content div{
+        background-color: #383636;
+        border-radius: 0.4rem;
+    }
+    
+    /*Aside section-2*/
+    
+    /*Headings for aside section with dropdown list with multiple options*/
+    .heading{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 12%;
+      margin-top: 4vh;
+      margin-left: 1.5vw;
+    }
+    .heading h4 a{
+        color:lightgreen;
+        text-decoration: none;
+    }
+    .queue-options{
+        position:fixed;
+        top:24%;
+        right:4%;
+        background-color:white;
+        height:auto;
+        width:10%;
+        text-align:center;
+        border: 2px solid white;
+        /*display:flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: flex-start;*/
+        opacity: 0;
+        transform: scale(0);
+        transition: all ease-in-out 0.2s;
+    }
+    .queue-options p{
+        font-weight: bolder;
+        cursor:pointer;
+        color:black;
+    }
+    #options-box:target{
+       opacity: 1;
+       transform:scale(1); 
+    }
+    hr{
+        width:80%;
+    }
+    /*Top Hits Content*/
+    .section-b{
+        height:86vh;
+        width:30%;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-left: 50px;
+    }
+    .top-hits{
+        height:auto;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        /*overflow: scroll;*/
+        cursor: pointer;
+    }
+    .section-b::-webkit-scrollbar{
+        display: none;
+    }
+    .top-hits-images img{
+        height: 5vw;
+        width: 6vw;
+        border-radius: 0.2rem;
+    }
+    .top-hits-images img:hover{
+        opacity: 0.7;
+    }
+    .left-side-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content:space-between;
+        width:70%;
+        height: 100%;
+        align-items: center;
+    }
+    .left-side-content div{
+       color:white;
+       font-weight: bold;
+       font-size: 1vw;
+    }
+    .left-side-content > div:nth-child(3) {
+        margin-left: 12px;
+        width: 50%;
+        word-wrap: break-word;
+    }
+    .right-side-content{
+        position:relative;
+        left:25vw;
+        top:-5vw;
+        color:var(--theme);
+        width: min-content;
+        font-size: 16px;
+    }
+    .right-side-content i{
+        transition: all ease-in-out 0.1s;
+    }
+    .right-side-content i:hover{
+        color:red;
+    }
+    .top-hits-item{
+        width:90%;
+        height:auto;
+        padding:0px 1%;
+        margin:1%;
+    }
+    /*animation for heart icon*/
+    @keyframes glow{
+        0% {
+            color: orange;
+        }
+        100% {
+            color: red;
+        }
+    }
+    
+    .top-hits-item:hover .fa-heart-o {
+        animation-name: glow;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 1s;
+    }
+    
+    /*.coverer{
+        background-color:grey;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5vw;
+        height:6.5vw;
+        width:27.5vw;
+    }*/
+    /* Footer section starts here*/
+    /* this is the container for the whole footer */
+    footer {
+        position: absolute;
+        bottom: 1px;
+        width: 100%;
+        height: 60px;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: nowrap;
+        padding: 0px 3%;
+        box-sizing: border-box;
+        z-index: 6;
+        color:white;
+    }
+    /* footer is divided into 3 parts */
+    /* 1. first part of the footer */
+    .active-song-description {
+        /* border:1px solid white; */
+        height: 90%;
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* the current song which is being played, this is the image container for that. */
+    #song-image {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+    }
+    /* current song image */
+    #song-image img {
+        width: 100%;
+        height: 100%;
+    }
+    /* heart and ban icon */
+    .heart-and-ban-icon {
+        height: 100%;
+        padding-top: 4%;
+    }
+    /* song decscription */
+    .song-desc {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    /* song name */
+    .song-desc div:nth-child(1) {
+        font-size: 14px;
+        font-family: cursive;
+    }
+    /* song author */
+    .song-desc div:nth-child(2) {
+        font-size: 12px;
+        font-family: cursive;
+    }
+    
+    /* 2. Second part of the footer*/
+    .player {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    /* controls is the container for all the center controls of the player */
+    .controls {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+    /* this is the song-duration slider */
+    #slider {
+        width: 100%;
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    /* ////////// */
+    .time {
+        margin: 0px 10px;
+    }
+    
+    /* adjusting the slider for better visuals */
+    .slidecontainer {
+        width: 100%;
+    }
+    /* for audio and main center player */
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.5;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+    }
+    /* hover effect for the slider */
+    .slider:hover {
+        opacity: 1;
+    }
+    /* these are for adjusting the dimensions and default styling of the long-slider */
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: #007bff;
+        cursor: pointer;
+    }
+    /* this is the circular thumb, which can be moved across the div */
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4caf50;
+        cursor: pointer;
+    }
+    
+    /* third part of the footer */
+    /* this contains the extra icons and slider for volume */
+    /* this is also a container */
+    .extras {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    

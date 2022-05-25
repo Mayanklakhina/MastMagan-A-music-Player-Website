@@ -5,13 +5,18 @@ const db = require('./configuration/mongoose');
 const session=require('express-session');
 const passport = require('passport');
 const passportLocal = require('./configuration/passport-local-strategy');
+app.use(express.urlencoded({
+    extended:false
+}))
+const MongoStore =  require('connect-mongo');
 
 app.set('view engine','ejs');
 app.set('views','./views');
+app.use(express.static('./assets'));
 
-app.use(session({
+  app.use(session({
     //name of cookie
-    name: 'codeial',
+    name: 'mastmagan',
     //Todo change the secret before deployment in production mode
     secret: 'blahsomething',
     saveUninitialized: false,
@@ -19,16 +24,15 @@ app.use(session({
     cookie:{
         maxAge:(1000 * 60 * 100)
     },
-    store: new MongoStore(
+    store: MongoStore.create(
         {
-            mongooseConnection: db,
+            mongoUrl: 'mongodb://localhost/musicplayer_development',
             autoRemove: 'disabled'
         }, function(err){
             console.log(err || 'connect-mongodb setup ok');
         }
     )
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());  
 

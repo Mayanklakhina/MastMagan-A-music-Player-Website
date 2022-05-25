@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Music makes you alive</title>
+  <!-- adding the favicon item -->
+	<link rel="shortcut icon" type="image/x-icon" href="/Images/music.ico">
+	<meta name="viewport" content="width=device-width,initial scale=1.0">
+	<link rel="stylesheet" href="/CSS/stylesheet_main.css">
+  <link rel="stylesheet" type="text/css" href="primaryPageResponsive.css">
+
+	<!-- Link stylesheet for using font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+	<!--Here we are making the navigation bar-->
+	<nav class="navigation-bar flex-properties">
+
+		<div class="navigation-content">
+			<!--navigation-content class will contain all the contents of navigation-bar-->
+            <div class="web-logo">
+				<span>
+					<img src="/Images/music.jpg">
+				</span>
+				<span>MastMagan</span>
+			</div>
+
+			<div class="favourite-btn nav-hovering">
+				<span>
+					<i class="fa fa-star-half-full" style="font-size:1.2rem; vertical-align: middle; position: relative;left: 32%; color: #69ec69;">
+						</i>
+				</span>
+				<span>
+					<a href="">
+						Favourites     <!--we are making it a link just for making it look good -->
+				</a>
+			</span>
+			</div>
+
+           
+        <!-- Code for inserting search bar in navigation bar -->
+			<div class="search-bar">
+				<i class="fa fa-search"></i>
+				<input id="search-anything" type="text" name="search" placeholder="Search Artists,Songs and Albums">
+           </div>
+
+        <!-- Code for inserting notification bell in navigation bar -->
+			<div class="notification-bell">
+				<i class="fa fa-bell"></i>
+			</div>
+
+           <div class="slash">
+           	<h1>|</h1>
+           </div>
+
+
+        <!-- Code for inserting notification Login option in navigation bar -->
+			<button class="login-btn">
+				<a href="">
+					Log in
+				</a>
+			</button>
+
+
+       <!-- Code for inserting signup in navigation bar -->
+			<button class="signup-btn">
+				<a href="">
+					Sign up
+				</a>
+			</button>
+
+            <header>
+                Page Header
+            
+                <ul>
+                    <% if(locals.user){%>
+                      <li>
+                          <a href="/users/profile">
+                              <%= user.name %>
+                          </a>
+                      </li>
+                      <li>
+                      <a href="/users/sign-out">Sign-out</a>
+                      </li>
+                    <% }else{%>
+                        <li>
+                            <a href="/users/sign-in">Sign-in</a>
+                        </li>
+                        <li>
+                            <a href="/users/sign-up">Sign-up</a>
+                        </li>
+                    <%}%>
+                </ul>
+            
+            </header>
+            
+	</div>
+	</nav>
+
+	<!-- Now we have done with the navigation bar, so we will now move to the main content -->
+     <main>
+     	<aside class="aside section-a">
+     	<!-- This are the top most three images whih shows the trending content -->
+     		<div class="outer-images-carousel">
+     			<div class="outer-images">
+     			<img src="/Images/topimage.jpg">
+     			<img src="/Images/mash.jpg">
+     			<img src="/Images/romantic.jpg">
+     	</div>
+     </div>
+
+     <!-- Latest Songs List-->
+     <div class="latest-songs">
+     	<div class="heading-of-each-part">
+
+     		<!-- We will include same class for heading of every section by including the 
+     		same class name in each section -->
+     		<h3>
+     			Latest Songs
+     		</h3>
+     	</div>
+     		<div class="latest-songs-content">
+     			<!-- This is the first song in the list -->
+     			<div class="songs">
+          <div>
+     				
+     			<img src="/Images/jaanbangaye.jpg">
+     		
+     			<!-- Play button will be shown when we hover on the song image -->
+     			<div class="play-btn">
+     				<i class="fa fa-play" style="width: 45%; height: 45%; margin-left:15px; display: inline-block;"></i>
+                </div>
+              </div>
+                <div class="song-details" >
+                	<h4>
+                		Jaan Ban Gaye
+                	</h4>
+                	<p>
+                	NOV 9, 2020
+                    </p>
+                </div>
+
+                <div class="options">
+                	<label for="three-dots1">
+                		<i class="fa fa-ellipsis-h">
+                		</i>
+                	</label>
+                	<input type="checkbox" id="three-dots1">
+                	<div class="checkbox-dropdown">
+                		<div class="dropdown-items">
+                			<p>
+                				<i class="fa fa-play-circle"></i>
+                            Play Now
+                			</p>
+             
+                		<hr>
+                
+                			<p>
+                				<i class="fa fa-plus"></i>
+                            Add to Queues
+                			</p>
+                        
+                        <hr>
+                        
+                        	<p>
+                         <i class="fa fa-list-ul"></i>
+                        		Add to Favourites
+                        	</p>
+                     
+                        <hr>
+
+                      
+                       	<p>
+                       		<i class="fa fa-info-circle"></i>
+                       		Get info
+                       	</p>
+                    
+                       </div>
+
+                   </div>
+                       <!-- declaring the duration of a song -->
+
+                       <p style="margin-left: -4px; font-size: 10px; font-weight: 500;">
+                       	4:40
+                       </p>
+         </div>
+     </div>
+     <div class="songs">
+      <div>
+     	
+     			<img src="/Images/talja.jpg" >
+     		
+     			<!-- Play button will be shown when we hover on the song image -->
+     			<div class="play-btn">
+     				<i class="fa fa-play" style="width: 45%; height: 45%; margin-left:15px; display: inline-block;"></i>
+                </div>
+              </div>
+                <div class="song-details" >
+                	<h4>
+                		Talja
+                	</h4>
+                	<p>
+                	DEC 25, 2020
+                    </p>
+                </div>
+
+                <div class="options">
+                	<label for="three-dots2">
+                		<i class="fa fa-ellipsis-h">
+                		</i>
+                	</label>
+                	<input type="checkbox" id="three-dots2">
+                	<div class="checkbox-dropdown">
+                		<div class="dropdown-items">
+                			<p>
+                				<i class="fa fa-play-circle"></i>
+                            Play Now
+                			</p>
+             
+                		<hr>
+                
+                			<p>
+                				<i class="fa fa-plus"></i>
+                            Add to Queues
+                			</p>
+                        
+                        <hr>
+                        
+                        	<p>
+                         <i class="fa fa-list-ul"></i>
+                        		Add to Favourites
+                        	</p>
+                     
+                        <hr>
+
+                      
+                       	<p>
+                       		<i class="fa fa-info-circle"></i>
+                       		Get info
+                       	</p>
+                    
+                       </div>
+
+                   </div>
+                       <!-- declaring the duration of a song -->
+
+                       <p style="margin-left: -4px; font-size: 10px; font-weight: 500;">
+                       	3:05
+                       </p>
+         </div>
+     </div>
+     <div class="songs">
+      <div>
+     			<img src="/Images/filhal.jpg">
+     		
+     			<!-- Play button will be shown when we hover on the song image -->
+     			<div class="play-btn">
+     				<i class="fa fa-play" style="width: 45%; height: 45%; margin-left:15px; display: inline-block;"></i>
+                </div>
+              </div>
+                <div class="song-details" >
+                	<h4>
+                		Filhaal2
+                	</h4>
+                	<p>
+                	JUL 15, 2021
+                    </p>
+                </div>
+
+                <div class="options">
+                	<label for="three-dots3">
+                		<i class="fa fa-ellipsis-h">
+                		</i>
+                	</label>
+                	<input type="checkbox" id="three-dots3">
+                	<div class="checkbox-dropdown">
+                		<div class="dropdown-items">
+                			<p>
+                				<i class="fa fa-play-circle"></i>
+                            Play Now
+                			</p>
+             
+                		<hr>
+                
+                			<p>
+                				<i class="fa fa-plus"></i>
+                            Add to Queues
+                			</p>
+                        
+                        <hr>
+                        
+                        	<p>
+                         <i class="fa fa-list-ul"></i>
+                        		Add to Favourites
+                        	</p>
+                     
+                        <hr>
+
+                      
+                       	<p>
+                       		<i class="fa fa-info-circle"></i>
+                       		Get info
+                       	</p>
+                    
+                       </div>
+
+                   </div>
+                       <!-- declaring the duration of a song -->
+
+                       <p style="margin-left: -4px; font-size: 10px; font-weight: 500;">
+                       	5:30
+                       </p>
+         </div>
+     </div>
+     <div class="songs">
+      <div>
+     			<img src="/Images/peaches.jpg">
+     		
+     			<!-- Play button will be shown when we hover on the song image -->
+     			<div class="play-btn">
+     				<i class="fa fa-play" style="width: 50%; height: 50%; margin-left:15px; display: inline-block;"></i>
+                </div>
+              </div>
+                <div class="song-details" >
+                	<h4>
+                		Peaches
+                	</h4>
+                	<p>
+                	JAN 20, 2021
+                    </p>
+                </div>
+
+                <div class="options">
+                	<label for="three-dots4">
+                		<i class="fa fa-ellipsis-h">
+                		</i>
+                	</label>
+                	<input type="checkbox" id="three-dots4">
+                	<div class="checkbox-dropdown">
+                		<div class="dropdown-items">
+                			<p>
+                				<i class="fa fa-play-circle"></i>
+                            Play Now
+                			</p>
+             
+                		<hr>
+                
+                			<p>
+                				<i class="fa fa-plus"></i>
+                            Add to Queues
+                			</p>
+                        
+                        <hr>
+                        
+                        	<p>
+                         <i class="fa fa-list-ul"></i>
+                        		Add to Favourites
+                        	</p>
+                     
+                        <hr>
+
+                      
+                       	<p>
+                       		<i class="fa fa-info-circle"></i>
+                       		Get info
+                       	</p>
+                    
+                       </div>
+
+                   </div>
+                       <!-- declaring the duration of a song -->
+
+                       <p style="margin-left: -4px; font-size: 10px; font-weight: 500;">
+                       	3:40
+                       </p>
+         </div>
+     </div>
+
+ </div>
+</div>
+<!-- Latest songs section is complete now//////// -->
+
+<!-- Popular Artists section -->
+
+              <div class="popular-artists">
+              	<div class="heading-of-each-part">
+              		<h3>
+              			Popular Artists
+              		</h3>
+              	</div>
+
+              	<div class="popular-artist-content">
+              		<a href="SinglePlaylistScreen.html" target="_blank">
+              		<div>
+              			<img src="/Images/sachet.jpg">
+              			<div><i class="fa fa-play"></i></div>
+                          
+              			<p style="font-weight:bold; font-size: 1.3vw; ">
+              				Sachet Tandon</p>
+              		</div>
+              	</a>
+
+              	<a href="SinglePlaylistScreen.html"target="_blank">
+              	
+              		<div>
+              			<img src="/Images/karan aujla.jpg">
+              			<div><i class="fa fa-play"></i></div>
+                          
+              			<p style="font-weight:bold; font-size: 1.3vw; ">
+              				Karan Aujla</p>
+              		</div>
+              	</a>
+
+              	<a href="/users/SinglePlaylistScreen" target="_blank">
+              	
+              		<div>
+              			<img src="/Images/billie.jpg">
+              			<div><i class="fa fa-play"></i></div>
+                          
+              			<p style="font-weight:bold; font-size: 1.3vw; ">
+              				Billie Eilish</p>
+              		</div>
+              	</a>
+                 
+                 <a href="SinglePlaylistScreen.html" target="_blank">
+              	
+                  <div>
+              			<img src="/Images/jassigill.jpg">
+              			<div><i class="fa fa-play"></i></div>
+                          
+              			<p style="font-weight:bold; font-size: 1.3vw;">
+              				Jassi Gill</p>
+              		</div>
+              	</a>
+
+              	<a href="SinglePlaylistScreen.html" target="_blank">
+              	
+                  <div>
+              			<img src="/Images/bruno.jpg">
+              			<div><i class="fa fa-play"></i></div>
+                          
+              			<p style="font-weight:bold; font-size: 1.3vw;">
+              				Bruno Mars</p>
+              	</div>
+              </a>
+
+              <a href="SinglePlaylistScreen.html" target="_blank">
+              	
+                 <div>
+              			<img src="/Images/neha.jpg">
+              			<div><i class="fa fa-play"></i></div>
+                          
+              			<p style="font-weight:bold; font-size: 1.3vw; ">
+              				Neha Kakkar</p>
+              		</div>
+              	</a>
+                 
+                 </div>
+              </div>
+<!-- Now we have done with the popular artists section -->
+<!-- Music Themes Part -->
+             <div class="music-themes">
+             	<div class="station">
+             		<div class="div-1">
+             			<div class="div-2">
+             				<div class="div-3">
+             					<img src="/Images/music-logo.jpg">
+             					<p>Stations</p>
+             				</div>
+             			</div>
+             		</div>
+             	</div>
+
+             	<!--Now we are creating the main theme content -->
+             	<div class="main-music-theme">
+             		<div class="music-theme-content">
+             			<img src="/Images/chill.jpg">
+             			<p>Chill</p>
+                </div>
+                <div class="music-theme-content">
+             			<img src="/Images/Love.jpg">
+             			<p>Love</p>
+                </div>
+                <div class="music-theme-content">
+             			<img src="/Images/Pop.jpg">
+             			<p>Pop</p>
+                </div>
+                <div class="music-theme-content">
+             			<img src="/Images/rock.jpg">
+             			<p>Rock</p>
+                </div>
+                <div class="music-theme-content">
+             			<img src="/Images/workout.jpeg">
+             			<p>Workout</p>
+                </div>
+                <div class="music-theme-content">
+             			<img src="/Images/retro.jpg">
+             			<p>Retro</p>
+                </div>
+              
+
+              
+             </div>
+         </div>
+         <!-- Now we are going create one more music theme -->
+         <div class="music-theme-2">
+         	<div class="music-content-1">
+         		<div class="music-content-2">
+         		<span>Electronics</span>
+         	</div>
+         </div>
+         	<div class="music-content-1">
+         		<div class="music-content-2">
+         	   <span>Party</span>
+         	</div>
+         </div>
+            <div class="music-content-1">
+         		<div class="music-content-2">
+               
+         		<span>RoadTrip</span>
+         	</div>
+         </div>
+     
+         </div>
+
+
+         <!-- Songs in English Language -->
+         <div class="latest">
+         	<div class="heading-of-each-part">
+         		<h3 style="margin-left: -1px;">
+         			Latest English
+         		</h3>
+         	</div>
+
+         	<div class="latest-content">
+         		<div>
+         			<img src="/Images/memories.jpg ">
+         			<p>Memories</p>
+         			<p>JAN 12,2020</p>
+         		</div>
+            <div>
+         			<img src="/Images/dusk.jpg">
+         			<p>Dusk Till Dawn</p>
+         			<p>FEB 15,2021</p>
+            </div>
+                 <div>
+         			<img src="/Images/girls.jpg">
+         			<p>Girls Like you</p>
+         			<p>MAY 1,2020</p>
+            </div>
+                <div>
+         			<img src="/Images/baby.png">
+         			<p>Baby</p>
+         			<p>AUG 30,2020</p>
+            </div>
+                <div>
+         			<img src="/Images/sorry.png">
+         			<p>Sorry</p>
+         			<p>NOV 10,2020</p>
+            </div>
+                <div>
+         			<img src="/Images/perfect.jpg">
+         			<p>Perfect</p>
+         			<p>MAR 11,2021</p>
+            </div>
+
+
+         </div>
+     </div>
+
+
+     <div class="latest">
+          <div class="heading-of-each-part">
+            <h3 style="margin-left: -1px;">
+              Latest Punjabi
+            </h3>
+          </div>
+
+          <div class="latest-content">
+            <div>
+              <img src="/Images/khabbiseat.jpg">
+              <p>Khabbi Seat</p>
+              <p>AUG 3,2021</p>
+            </div>
+            <div>
+              <img src="/Images/parshawan.jpg">
+              <p>Parshawan</p>
+              <p>DEC 15,2020</p>
+            </div>
+                 <div>
+              <img src="/Images/panidigal.jpg">
+              <p>Paani di Gaal</p>
+              <p>MAR 21,2021</p>
+            </div>
+                <div>
+              <img src="/Images/Chitta_Kurta.jpg">
+              <p>Chitta Kurta</p>
+              <p>OCT 10,2020</p>
+            </div>
+                <div>
+              <img src="/Images/sira-e-hou.jpg">
+              <p>Sira E Hou</p>
+              <p>NOV 25,2020</p>
+            </div>
+                <div>
+              <img src="/Images/palazzo.jpg">
+              <p>Palazzo 2</p>
+              <p>JUN 11,2021</p>
+            </div>
+
+
+         </div>
+     </div>
+
+     <!-- Latest Hindi song part -->
+
+     <div class="latest">
+         	<div class="heading-of-each-part">
+         		<h3 style="margin-left: -1px;">
+         			Latest Hindi
+         		</h3>
+         	</div>
+
+         	<div class="latest-content">
+         		<div>
+         			<img src="/Images/param.jpg">
+         			<p>Param Sundari</p>
+         			<p>JAN 22,2020</p>
+            </div>
+            <div>
+         			<img src="/Images/baithe.jpg">
+         			<p>Baithe Baithe</p>
+         			<p>FEB 25,2021</p>
+            </div>
+                 <div>
+         			<img src="/Images/lutgaye.jpg">
+         			<p>Lut Gaye</p>
+         			<p>MAY 17,2020</p>
+            </div>
+                <div>
+         			<img src="/Images/kaisehua.jpg">
+         			<p>Kaise Hua</p>
+         			<p>AUG 10,2021</p>
+            </div>
+                <div>
+         			<img src="/Images/nadiyon.jpg">
+         			<p>Nadiyon Paar</p>
+         			<p>NOV 4,2020</p>
+            </div>
+                <div>
+         			<img src="/Images/paani.jpg">
+         			<p>Paani Paani</p>
+         			<p>SEP 18,2021</p>
+            </div>
+
+
+         </div>
+     </div>
+
+</aside>
+
+<!-- ASIDE PART 2 -->
+<aside class="aside section-b">
+	<div class="heading">
+		<h1 style="font-size:1.8vw;">
+			Top Hits
+		</h1>
+		<h4 style="font-size: 1.3vw;"><a href="#options-box">Options
+<i class="fa fa-chevron-circle-down"></i>
+</a></h4>
+	</div>
+
+	<!-- So now we are making a queue which will contain three options playlist,fav songs 
+	and close button so we will have to use an anchor tag -->
+   <div class="queue-options" id="options-box">
+   	<p>Playlist</p>
+   	<hr>
+   	<p>Favourite Songs</p>
+   	<hr>
+   	<p><a href="#" style="color:red;">Close</p>
+   </div>
+   
+   <!-- Now we will write code for  top hits content   -->
+   <div class="top-hits">
+   	<div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			01
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/chhordenge.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Chhor Denge
+   			</div>
+   			<p>
+   				Parampara Tandon
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			02
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/tumsehi.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Tum se hi
+   			</div>
+   			<p>
+   				Mohit Chauhan
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			03
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/lehanga.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Lehanga
+   			</div>
+   			<p>
+   				Jass Manak
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			04
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/brownmunde.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Brown Munde
+   			</div>
+   			<p>
+   				AP Dhillon
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			05
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/8parche.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				8 Parche
+   			</div>
+   			<p>
+   			 Baani Sandhu
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			06
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/kinnasona.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Kinna Sona
+   			</div>
+   			<p>
+   			Jubin Nautiyal
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			07
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/kismatteri.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Kismat Teri
+   			</div>
+   			<p>
+   				Inder Chahal
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+    
+   </div>
+
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   		08
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/onmyway.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				On my way
+   			</div>
+   			<p>
+   			Alan Walker
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			09
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/thodijagah.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Thodi Jagah
+   			</div>
+   			<p>
+   				Arijit Singh
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			10
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/yummy.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Yummy
+   			</div>
+   			<p>
+   				Justin Bieber
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			11
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/titlian.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Titlian
+   			</div>
+   			<p>
+   				Afsana Khan
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+
+   <div class="top-hits-item">
+   	<div class="left-side-content">
+   		<!-- index of songs -->
+   		<div style="margin-right: 4px;">
+   			12
+   		</div>
+
+   		<!-- song images and details -->
+   		<div class="top-hits-images">
+   			<img src="/Images/vail.jpg">
+   		</div>
+   		<div class="singer-name">
+   			<div>
+   				Vail
+   			</div>
+   			<p>
+   				Mankirt Aulakh
+   			</p>
+   		</div>
+   	</div>
+   	<!-- Right side content -->
+   	<div class="right-side-content">
+
+            <i class="fa fa-heart-o"></i>
+   	</div>
+
+   </div>
+
+</div>
+
+	</aside>
+    </main>
+
+        <footer>
+        <div class="active-song-description">
+            <!-- song image -->
+            <div id="song-image">
+                <img src="/Images/brown.jpg">
+            </div>
+            <!-- song name and author -->
+            <div class="song-desc">
+                <div>
+                    Brown Shortie
+                </div>
+                <div>
+                    Sidhu Moosewala
+                </div>
+                <!-- heart icon and ban icon -->
+            </div>
+            <div class="heart-and-ban-icon">
+                <span>
+                    <i class="fa fa-heart"></i>
+                </span>
+                <span>
+                    <i class="fa fa-ban"></i>
+                </span>
+            </div>
+        </div>
+        <!-- these are the main player controls -->
+        <div class="player">
+            <div class="controls">
+                <div><i class="fa fa-random"></i></div>
+                <div><i class="fa fa-step-backward"></i></div>
+                <div><i class="fa fa-pause-circle"></i></div>
+                <div><i class="fa fa-step-forward"></i></div>
+                <div><i class="fa fa-redo"></i></div>
+            </div>
+            <!-- this is the slider -->
+            <div id="slider">
+                <!-- current time -->
+                <div class="time">
+                    1:10
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                </div>
+                <!-- total time -->
+                <div class="time">
+                    4:50
+                </div>
+            </div>
+        </div>
+        <!-- other icons including the volume slider and all -->
+        <div class="extras">
+            <div>
+                <i class="fa fa-list-ul"></i>
+            </div>
+            <div>
+                <i class="fa fa-laptop"></i>
+            </div>
+            <div>
+                <i class="fa fa-volume-up"></i>
+            </div>
+            <div class="slidecontainer" style="width:30%;">
+                <input type="range" min="0" max="100" value="0" class="slider" id="myRange" style="margin-top:0px;">
+            </div>
+            <div>
+                <i class="fa fa-expand-alt"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="SongQuery.js"></script>
+
+
+</body>
+</html>
