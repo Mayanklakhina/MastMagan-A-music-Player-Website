@@ -5,7 +5,7 @@ const express = require('express');
 const router = express.Router();
 const passport=require('passport');
 const usersController = require('../controllers/user_controller');
-router.get('/sign-up',usersController.signUp);
+// router.get('/sign-up',usersController.signUp);
 
 router.get('/sign-in',usersController.signIn);
 // router.get('/sign-out',usersController.destroySession);
@@ -23,7 +23,8 @@ router.get('/sign-out', function(req, res, next) {
       res.redirect('/');
     });
   });
-  router.get('/SinglePlaylistScreen',usersController.SinglePlaylist);
+  router.get('/karan-aujla',usersController.KaranAujla);
+ 
 
 
 

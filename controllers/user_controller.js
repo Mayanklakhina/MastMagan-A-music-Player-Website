@@ -75,16 +75,16 @@ module.exports.profile = function(req,res){
 
 // }
 //render the sign up page
-module.exports.signUp=function(req,res){
-    //we checked if already signed in then don't show again the sign-up.. instead redirect to profile page
-    if(req.isAuthenticated()){
-        return res.redirect('/users/profile');
-    }
+// module.exports.signUp=function(req,res){
+//     //we checked if already signed in then don't show again the sign-up.. instead redirect to profile page
+//     if(req.isAuthenticated()){
+//         return res.redirect('/users/profile');
+//     }
 
-    return res.render('user_sign_up',{
-        title:"MastMagan | Sign Up"
-    })
-}
+//     return res.render('user_sign_up',{
+//         title:"MastMagan | Sign Up"
+//     })
+// }
 //render the sign in page and create sesion for user
 module.exports.signIn=function(req,res){
     //we checked if already signed in then don't show again the sign-in.. instead redirect to profile page
@@ -92,10 +92,11 @@ module.exports.signIn=function(req,res){
         return res.redirect('/users/profile');
     }
 
-    return res.render('user_sign_in',{
-        title:"MastMagan | Sign In"
-    })
+    return res.render('sign_in');
+        // title:"MastMagan | Sign In"
 }
+    
+
 
 //get the sign in data
 module.exports.createSession=function(req,res){
@@ -108,6 +109,6 @@ module.exports.destroySession = function(req,res){
 
     return res.redirect('/');
 }
-module.exports.SinglePlaylist = function(req,res){
-    return res.render('SinglePlaylistScreen');
+module.exports.KaranAujla = function(req,res){
+    return res.render('karan_aujla');
 }
