@@ -1,0 +1,632 @@
+/*:root{
+    --theme:#262835;
+}*/
+body{
+	margin: 0px;
+	font-family: spotify-circular,Helvetica,Arial,sans-serif;
+	color:white;
+	background-image: url("/Images/hello.jpg");
+	/*#1e211e;*/
+	 /*linear-gradient(#1e1f35,#49c34e);*/
+}
+/*Just removing all the styles from anchor tag and formatting em white*/
+a{
+	text-decoration: none;
+	color : white;
+}
+
+.flex-properties{
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;  /*default value*/
+	justify-content: space-between;
+	align-items: center;
+    box-sizing: border-box;
+  
+}
+/*Just adding the general properties into the navigation-bar.*/
+.navigation-bar{
+	height: auto;
+	width: auto;
+    background: black;
+    background-attachment: fixed;
+    transition: all 0.5s ease-in-out;
+}
+.navigation-content div{
+	display:inline-block;
+	margin:5px 5px;
+}
+
+@keyframes rotating{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.web-logo img{
+  height: 60px;
+  width:  60px;
+  border-radius: 50%;
+  vertical-align: middle;
+  animation-name: rotating;
+  animation-timing-function: ease-in-out;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.web-logo span{
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 50px;
+	position: relative;
+	left: 2%;
+	vertical-align: middle;
+}
+/*All the divs in the navigation content is having the display property as inline-block*/
+
+
+/*Favourite Button*/
+.favourite-btn span a{
+	font-size: 1.3vw;
+    margin-left: 50px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.nav-hovering a:hover{                  
+	color:#69ec69;
+}
+
+/*Search part*/
+.search-bar input{
+	margin-left: 30vw;
+	border-radius: 0.9rem;
+	font-size: 1.2vw;
+	width: 21.7vw;
+	height: 2.3vw;
+	padding-left: 30px;
+	vertical-align: middle;
+	border:none;
+	text-decoration: none;
+
+}
+.search-bar i{
+	position: relative;
+	left:57.5%;
+	font-size: 20px;
+	color: green;
+	vertical-align: middle;
+	cursor: pointer;
+}
+input:focus {
+	outline: none;
+}
+/*Notification Bell*/
+@keyframes moving_bell {
+	0% {
+		transform: rotate(-15deg);
+	}
+	50% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}
+.notification-bell i{
+	color:white;
+	font-size:2vw; 
+	margin-left: 15px;
+	vertical-align: middle;
+	cursor: pointer;
+	animation-name: moving_bell;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+
+}
+
+.slash h1{
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+.profile img{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-left: 15px;
+
+}
+/*Navigation bar part is completed...*/
+
+/*Main Part*/
+
+main{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*padding:0% 1%;*/
+  transition: all ease-in-out 0.1s;
+}
+/*There are two aside section both will have the same class.*/
+.aside{
+	display: inline-block;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.section-a{
+	width:70%;
+	height:85vh;
+	overflow: scroll;
+	overflow-x:hidden;
+}
+.section-a::-webkit-scrollbar{
+	display: none;
+}
+/*section b of main part*/
+.section-b {
+	width: 28%;
+	height: 85vh;
+}
+
+
+/*Aside section-a*/
+.karan-aujla{
+	position:relative;
+	/*left:-10%;*/
+	top:10%;
+	height:30vw;
+	width:99.8%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border:1px solid rgb(81,78,86,1);
+	/*box-shadow: 1px 1px 1px 1px rgba(230,196,196,0.3);/*/
+
+	margin-bottom: 2vw;
+}
+
+.singer-image{
+	height:30vw;
+	width: 28vw;
+	 /*24vw;*/
+	background-image: linear-gradient(
+			to bottom,
+			transparent,
+			rgba(20, 27, 65, 1)
+		),
+		url("/Images/sachet.jpg");
+	background-size: cover;
+}
+
+.singer-details{
+	display:flex;
+	flex-direction: column;
+    justify-content: center;
+    height:100%;
+    width:67%;
+    border:#73778e;
+
+}
+/*.singer-details,.followers{*/
+	/*display: inline-block;*/
+/*}*/
+.description-part,.buttons{
+	margin-left: 20px;
+	width:100%;
+	height:max-content;
+}
+.singer-name,.followers{
+	display: inline-block;
+	margin-bottom: -10vw;
+}
+.singer-name h1{
+	position: relative;
+	font-size: 2vw;
+	top:-1.9vw;
+	/*font-family: cursive;*/
+}
+.followers{
+	position:absolute;
+	left:60vw;
+	font-size: 15px;
+	font-weight: bold;
+	color:rgb(185,185,185);
+	/*font-family: cursive;*/
+
+}
+.category{
+	margin-top: -10px;
+	margin-bottom:4vw;
+}
+.category,.details{
+	font-size: 14px;
+	line-height: 1.5vw;
+	font-family:cursive;
+	color:rgb(185,185,185);
+	overflow-wrap: break-word;
+
+}
+.btns>button{
+	color:white;
+	font-size: 1.2vw;
+	font-weight: bold;
+	padding:5px;
+	border:0px;
+	width:10vw;
+	margin-left:-1.5vw;
+    cursor:pointer;
+    /*font-family: cursive;*/
+    margin-top: 15px;
+}
+.btns>button:nth-child(1){
+	background-image: linear-gradient(90deg,#9550a0,#5c61a5);
+}
+.btns>button:nth-child(1):hover{
+	background-image:linear-gradient(90deg,#5c61a5,#9550a0);
+}
+
+.btns>button:nth-child(2){
+	background-color: transparent;
+	margin-left:4vw;
+	color:rgb(185,185,185);
+
+}
+.buttons p{
+	margin-left: -1.5vw;
+	font-size: 0.9vw;
+	color:rgb(185,185,185);
+	font-family: cursive;
+
+}
+
+/*Playlist Content*/
+.playlist-content{
+	height:auto;
+	width:99.8%;
+	/*border: 1px solid rgba(81,78,86,1);*/
+	position: relative;
+	top:8vw;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+}
+.playlist-item{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+	height:10vh;
+	margin-bottom:20px;
+	border-radius: 0.4rem;
+	background-color:#383636;
+}
+.left-content{
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content:flex-start;
+	height:100%;
+	width:60%;
+}
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: min-content;
+	height: 100%;
+}
+/* right part of the playlist item, which contains icons */
+.right-content{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 100%;
+	padding-right: 2%;
+}
+.left-content>div:nth-child(1){
+	margin-left:5%;
+	font-size: 14px;
+}
+.left-content>div:nth-child(2){
+	position: relative;
+	max-width:50px;
+	min-width:50px;
+	height:80%;
+	margin:0px 9% 0px 8%;
+
+}
+.left-content>div:nth-child(2) img{
+	height:100%;
+	width:100%;
+}
+.left-content>div:nth-child(3)
+{
+	margin-left: -1vw;
+}
+.left-content > div:nth-child(3) p {
+	color: rgb(185, 185, 185);
+	margin-top:-20px;
+	font-size: 14px;
+}
+.left-content>div:nth-child(3) h4{
+	margin-bottom: 25px;
+}
+
+.left-content>div:nth-child(3) h4:hover{
+    cursor: pointer;
+}
+
+/*Playbutton styles*/
+.play-btn{
+	background-color: black;
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0%;
+	left:0%;
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.play-btn:hover{
+	opacity:0.6;
+}
+.center{
+	font-size: 12px;
+	color:rgb(185,185,185);
+	margin-left: -10vw;
+}
+.right-content div i{
+	font-size: 20px;
+}
+.right-content {
+	color: rgb(185, 185, 185);
+}
+.right-content div:nth-child(2) {
+	margin-left: 27%;
+}
+
+
+/*Aside section-b starts here*/
+
+.heading{
+	position: relative;
+	margin-bottom: 12px;
+	margin-top:10%;
+}
+
+
+.heading h1,.heading div{
+	display: inline-block;
+}
+.heading h1{
+	font-size: 24px;
+	margin-bottom: 0px;
+}
+
+.heading div{
+	position:absolute;
+	bottom: 0%;
+	right:0px;
+	top:28%;
+}
+
+.heading div button{
+	background-color: transparent;
+	color:white;
+	border: var(--theme);
+	font-size: 15px;
+}
+
+
+/*Similar artist*/
+.list{
+	height:36vh;
+	overflow: scroll;
+}
+.list::-webkit-scrollbar{
+	display: none;
+}
+/*Artist list items*/
+.artist-list-item{
+	width:100%;
+	height:100px;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.artist-list-item>div:nth-child(1){
+	position: relative;
+	height: 100%;
+	width:100px;
+
+}
+.artist-list-item>div:nth-child(1) img{
+	height: 100%;
+	width:100%;
+}
+/*Hovering effect on the artist picture*/
+.artist-list-item>div:nth-child(1) img:hover{
+	opacity:0.7;
+	cursor: pointer;
+}
+.artist-list-item>div:nth-child(2) h4{
+	margin-bottom: 25px;
+}
+.artist-list-item>div:nth-child(2) p{
+	color: rgb(185, 185, 185);
+	margin-top:-20px;
+	font-size: 14px;
+}
+.artist-list-item>div:nth-child(2)
+{
+	margin-left: -6vw;
+}
+
+.right-side{
+	height: 100%;
+	text-align: right;
+}
+.right-side div i{
+	margin-bottom: 15px;
+}
+
+/* Footer section starts here*/
+/* this is the container for the whole footer */
+footer {
+	position: absolute;
+	bottom: 1px;
+	width: 100%;
+	height: 60px;
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+	padding: 0px 3%;
+	box-sizing: border-box;
+	z-index: 6;
+	color:white;
+}
+/* footer is divided into 3 parts */
+/* 1. first part of the footer */
+.active-song-description {
+	/* border:1px solid white; */
+	height: 90%;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* the current song which is being played, this is the image container for that. */
+#song-image {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+}
+/* current song image */
+#song-image img {
+	width: 100%;
+	height: 100%;
+}
+/* heart and ban icon */
+.heart-and-ban-icon {
+	height: 100%;
+	padding-top: 4%;
+}
+/* song decscription */
+.song-desc {
+	margin-right: 1%;
+	margin-left: 1%;
+}
+/* song name */
+.song-desc div:nth-child(1) {
+	font-size: 14px;
+	font-family: cursive;
+}
+/* song author */
+.song-desc div:nth-child(2) {
+	font-size: 12px;
+	font-family: cursive;
+}
+
+/* 2. Second part of the footer*/
+.player {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+/* controls is the container for all the center controls of the player */
+.controls {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+/* this is the song-duration slider */
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+/* ////////// */
+.time {
+	margin: 0px 10px;
+}
+
+/* adjusting the slider for better visuals */
+.slidecontainer {
+	width: 100%;
+}
+/* for audio and main center player */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+/* hover effect for the slider */
+.slider:hover {
+	opacity: 1;
+}
+/* these are for adjusting the dimensions and default styling of the long-slider */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background: #007bff;
+	cursor: pointer;
+}
+/* this is the circular thumb, which can be moved across the div */
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+/* third part of the footer */
+/* this contains the extra icons and slider for volume */
+/* this is also a container */
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}

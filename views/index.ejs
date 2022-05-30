@@ -5,10 +5,13 @@
 	<meta charset="utf-8">
 	<title>Music makes you alive</title>
   <!-- adding the favicon item -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="/Images/music.ico">
 	<meta name="viewport" content="width=device-width,initial scale=1.0">
 	<link rel="stylesheet" href="/CSS/stylesheet_main.css">
   <link rel="stylesheet" type="text/css" href="primaryPageResponsive.css">
+
 
 	<!-- Link stylesheet for using font awesome icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -126,7 +129,8 @@
      			<div class="songs">
           <div>
      				
-     			<img src="/Images/jaanbangaye.jpg">
+     			<img id="theImage" src="/Images/chhordenge.jpg">
+				 <audio id="audio" src="/Music/Chor Denge.mp3" ></audio>
      		
      			<!-- Play button will be shown when we hover on the song image -->
      			<div class="play-btn">
@@ -135,7 +139,7 @@
               </div>
                 <div class="song-details" >
                 	<h4>
-                		Jaan Ban Gaye
+                		Chhor Denge
                 	</h4>
                 	<p>
                 	NOV 9, 2020
@@ -190,7 +194,9 @@
      <div class="songs">
       <div>
      	
-     			<img src="/Images/talja.jpg" >
+     			
+		<img id="talja-image" src="/Images/talja.jpg" >
+		<audio id="talja-song" src="/Music/Talja_1.mp3" ></audio>
      		
      			<!-- Play button will be shown when we hover on the song image -->
      			<div class="play-btn">
@@ -387,12 +393,12 @@
               <div class="popular-artists">
               	<div class="heading-of-each-part">
               		<h3>
-              			Popular Artists
+              			Featured Artists
               		</h3>
               	</div>
 
               	<div class="popular-artist-content">
-              		<a href="SinglePlaylistScreen.html" target="_blank">
+              		<a href="/users/sachet-tandon">
               		<div>
               			<img src="/Images/sachet.jpg">
               			<div><i class="fa fa-play"></i></div>
@@ -402,7 +408,7 @@
               		</div>
               	</a>
 
-              	<a href="SinglePlaylistScreen.html"target="_blank">
+              	<a href="/users/karan-aujla">
               	
               		<div>
               			<img src="/Images/karan aujla.jpg">
@@ -413,18 +419,18 @@
               		</div>
               	</a>
 
-              	<a href="/users/karan-aujla" target="_blank">
+              	<a href="/users/arijit-singh">
               	
               		<div>
-              			<img src="/Images/billie.jpg">
+              			<img src="/Images/ar.jpg">
               			<div><i class="fa fa-play"></i></div>
                           
               			<p style="font-weight:bold; font-size: 1.3vw; ">
-              				Billie Eilish</p>
+              				Arijit Singh</p>
               		</div>
               	</a>
                  
-                 <a href="SinglePlaylistScreen.html" target="_blank">
+                 <a href="/users/jassi-gill">
               	
                   <div>
               			<img src="/Images/jassigill.jpg">
@@ -435,18 +441,19 @@
               		</div>
               	</a>
 
-              	<a href="SinglePlaylistScreen.html" target="_blank">
+              	<a href="/users/badshah">
               	
                   <div>
-              			<img src="/Images/bruno.jpg">
+              			<img src="/Images/bad.jpg">
               			<div><i class="fa fa-play"></i></div>
                           
               			<p style="font-weight:bold; font-size: 1.3vw;">
-              				Bruno Mars</p>
+							Badshah
+              				</p>
               	</div>
               </a>
 
-              <a href="SinglePlaylistScreen.html" target="_blank">
+              <a href="/users/neha-kakkar">
               	
                  <div>
               			<img src="/Images/neha.jpg">
@@ -693,14 +700,14 @@
 
    		<!-- song images and details -->
    		<div class="top-hits-images">
-   			<img src="/Images/chhordenge.jpg">
+   			<img src="/Images/jaanbangaye.jpg">
    		</div>
    		<div class="singer-name">
    			<div>
-   				Chhor Denge
+   				Jaan Ban Gaye
    			</div>
    			<p>
-   				Parampara Tandon
+   				Vishal Mishra
    			</p>
    		</div>
    	</div>
@@ -941,7 +948,7 @@
 
    		<!-- song images and details -->
    		<div class="top-hits-images">
-   			<img src="/Images/yummy.jpg">
+   			<img src="/Images/yummy1.jpg">
    		</div>
    		<div class="singer-name">
    			<div>
@@ -1090,7 +1097,32 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="SongQuery.js"></script>
+    <script type="text/javascript" src="/JS/SongQuery.js">
+		
+	</script>
+	<script> 
+	<% if (flash.success && flash.success.length > 0) {%>
+		   new Noty({
+			   theme: 'relax',
+			   text: "<%= flash.success %>",
+			   type: 'success',
+			   layout: 'topRight',
+			   timeout: 1500
+			   
+		   }).show();    
+	   <%} %>
+	   
+	   <% if (flash.error && flash.error.length > 0) {%>
+		   new Noty({
+			   theme: 'relax',
+			   text: "<%= flash.error %>",
+			   type: 'error',
+			   layout: 'topRight',
+			   timeout: 1500
+			   
+		   }).show();    
+	   <%} %>
+</script>
 
 
 </body>

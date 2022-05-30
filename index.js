@@ -9,6 +9,8 @@ app.use(express.urlencoded({
     extended:false
 }))
 const MongoStore =  require('connect-mongo');
+const flash = require('connect-flash');
+const customMware= require('./configuration/middleware');
 
 app.set('view engine','ejs');
 app.set('views','./views');
@@ -38,6 +40,8 @@ app.use(passport.session());
 
 // doubt why we did this 
 app.use(passport.setAuthenticatedUser);
+app.use(flash());
+app.use(customMware.setFlash);
 
 app.use('/',require('./routes/index'));
 

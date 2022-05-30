@@ -10,6 +10,7 @@ const usersController = require('../controllers/user_controller');
 router.get('/sign-in',usersController.signIn);
 // router.get('/sign-out',usersController.destroySession);
 router.post('/create',usersController.create); 
+router.get('/',usersController.musicpage);
 
 //use passport as a middleware to authenticate
 router.post('/create-session',passport.authenticate(
@@ -24,6 +25,13 @@ router.get('/sign-out', function(req, res, next) {
     });
   });
   router.get('/karan-aujla',usersController.KaranAujla);
+  router.get('/sachet-tandon',usersController.SachetTandon);
+  router.get('/neha-kakkar',usersController.NehaKakkar);
+  router.get('/jassi-gill',usersController.JassiGill);
+  
+  router.get('/arijit-singh',usersController.ArijitSingh);
+  
+  router.get('/badshah',usersController.Badshah);
  
 
 

@@ -20,6 +20,7 @@ module.exports.create=function(req,res){
     //first check if the password and confirm password mathces or not
     //if not matches then redirect back to same page
     if(req.body.password!=req.body.confirm_password){
+        req.flash('error','The password does not matched with confirm password');
         return res.redirect('back');
     }
     //check if email is already present
@@ -97,18 +98,38 @@ module.exports.signIn=function(req,res){
 }
     
 
-
-//get the sign in data
-module.exports.createSession=function(req,res){
+module.exports.musicpage=function(req,res){
     return res.render('index');
+}
+//get the sign in 
+module.exports.createSession=function(req,res){
+    req.flash('success','Loggged in Successfully');
+    return res.redirect('/users');
 }
 
 module.exports.destroySession = function(req,res){
     //inbuilt function provided by passport to req for logout
     req.logout();
+    req.flash('success','You have logged out.!');
 
     return res.redirect('/');
 }
 module.exports.KaranAujla = function(req,res){
     return res.render('karan_aujla');
+}
+module.exports.SachetTandon = function(req,res){
+    return res.render('sachet_tandon');
+}
+module.exports.NehaKakkar = function(req,res){
+    return res.render('neha');
+}
+
+module.exports.JassiGill = function(req,res){
+    return res.render('jassi');
+}
+module.exports.ArijitSingh = function(req,res){
+    return res.render('arijit');
+}
+module.exports.Badshah = function(req,res){
+    return res.render('badshah');
 }
