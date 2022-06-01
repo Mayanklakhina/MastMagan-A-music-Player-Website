@@ -32,6 +32,12 @@ router.get('/sign-out', function(req, res, next) {
   router.get('/arijit-singh',usersController.ArijitSingh);
   
   router.get('/badshah',usersController.Badshah);
+  
+  router.get('/party-songs',usersController.party);
+  
+  router.get('/electronic-songs',usersController.electronic);
+  
+  router.get('/roadtrip-songs',usersController.roadtrip);
  
 
 

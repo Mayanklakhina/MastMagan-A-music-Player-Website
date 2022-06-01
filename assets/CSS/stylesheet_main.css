@@ -135,7 +135,7 @@
         margin-left: 15px;
         vertical-align: middle;
     }
-    /*Login button*/
+    /* Login button
     .login-btn{
         background: #408a43;
         border-radius: 0.3rem;
@@ -145,35 +145,38 @@
     }
     .login-btn  a{
         font-size: 1.3vw;
-        /*margin-left: 15px;*/
+        /*margin-left: 15px;
         font-weight: bold;
         vertical-align: middle;
         padding:5px;
     }
     .login-btn:hover{
         background:#08610c;
-        /*#408a43 ;*/
+        /*#408a43 ;
+    } */
+    .name{
+        margin-left: 15px;
     }
     
     /*Sign up button*/
-    .signup-btn{
+    /* .signup-btn{
         background:#bb4840;
-        /*#dc291c;*/
+        /*#dc291c;
         border-radius: 0.3rem;
         height:1.7rem;
         border:#bb4840;
     }
     .signup-btn  a{
         font-size: 1.3vw;
-        /*margin-left: 15px;*/
+        /*margin-left: 15px;
         font-weight: bold;
         vertical-align: middle;
         padding:5px;
     }
     .signup-btn:hover{
         background: #dc291c;
-        /*#bb4840;*/
-    }
+        /*#bb4840;
+    } */
     /*Navigation bar part is completed...*/
     
     /*Main Section*/
@@ -924,3 +927,52 @@
         align-items: center;
     }
     
+    .name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        /* height: 65px; */
+        /* background-color: black; */
+        color: white;
+    }
+    
+    .name li {
+        padding: 0 12px;
+        float: left;
+        list-style-type: none;
+        
+        height: 2vw;
+	/* border:#408a43; */
+	margin-left: 15px;
+    }
+    .name li a{
+        font-size: 1.3vw;
+        font-weight: bold;
+    vertical-align: middle;
+   }
+   .name li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    background-color: red;
+    /* margin-right: 30px; */
+    width: 90px;
+    /* line-height: 60px; */
+  }
+  .name li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    /* display: block; */
+  }
+  
+  .name li a:hover {
+    text-decoration: none;
+    color: #000000;
+    background-color: red;
+  }
+
+  .mashups-images:hover{
+      opacity: 0.5;
+      cursor: pointer;
+  }

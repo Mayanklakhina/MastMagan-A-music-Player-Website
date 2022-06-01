@@ -74,10 +74,8 @@
 					Sign up
 				</a>
 			</button> -->
-
-            <header>
             
-                <ul>
+                <ul class="name">
                     <% if(locals.user){%>
                       <li>
                           <a href="/users/profile">
@@ -95,9 +93,7 @@
                             <a href="/users/sign-up">Sign-up</a>
                         </li>
                     <%}%>
-                </ul>
-            
-            </header>
+					</ul>
             
 	</div>
 	</nav>
@@ -259,7 +255,8 @@
      </div>
      <div class="songs">
       <div>
-     			<img src="/Images/filhal.jpg">
+     			<img id="filhaal-image" src="/Images/filhal.jpg">
+				 <audio id="filhaal-song" src="/Music/filhaal.mp3" ></audio>
      		
      			<!-- Play button will be shown when we hover on the song image -->
      			<div class="play-btn">
@@ -322,7 +319,8 @@
      </div>
      <div class="songs">
       <div>
-     			<img src="/Images/peaches.jpg">
+     			<img id="baby-image"src="/Images/baby.png">
+				 <audio id="baby-song" src="/Music/baby.mp3"></audio>
      		
      			<!-- Play button will be shown when we hover on the song image -->
      			<div class="play-btn">
@@ -331,10 +329,10 @@
               </div>
                 <div class="song-details" >
                 	<h4>
-                		Peaches
+                		Baby
                 	</h4>
                 	<p>
-                	JAN 20, 2021
+                	JAN 20, 2022
                     </p>
                 </div>
 
@@ -474,7 +472,7 @@
              			<div class="div-2">
              				<div class="div-3">
              					<img src="/Images/music-logo.jpg">
-             					<p>Stations</p>
+             					<p>Mashups</p>
              				</div>
              			</div>
              		</div>
@@ -483,28 +481,34 @@
              	<!--Now we are creating the main theme content -->
              	<div class="main-music-theme">
              		<div class="music-theme-content">
-             			<img src="/Images/chill.jpg">
-             			<p>Chill</p>
+             			<img id="chill-image" class="mashups-images"  src="/Images/chill2.jpg">
+						 <audio id="chill-song" src="/Music/chill.mp3"></audio>
+             			<!-- <p>Chill</p> -->
                 </div>
                 <div class="music-theme-content">
-             			<img src="/Images/Love.jpg">
-             			<p>Love</p>
+             			<img id="love-image" class="mashups-images"  src="/Images/Love.jpg">
+						 <audio id="love-song" src="/Music/love.mp3"></audio>
+             			<!-- <p>Love</p> -->
                 </div>
                 <div class="music-theme-content">
-             			<img src="/Images/Pop.jpg">
-             			<p>Pop</p>
+             			<img id="pop-image" class="mashups-images"  src="/Images/popp.png">
+						 <audio id="pop-song" src="/Music/pop.mp3"></audio>
+             			<!-- <p>Pop</p> -->
                 </div>
                 <div class="music-theme-content">
-             			<img src="/Images/rock.jpg">
-             			<p>Rock</p>
+             			<img id="rock-image" class="mashups-images"  src="/Images/rock2.jpg">
+						 <audio id="rock-song" src="/Music/rock.mp3"></audio>
+             			<!-- <p>Rock</p> -->
                 </div>
                 <div class="music-theme-content">
-             			<img src="/Images/workout.jpeg">
-             			<p>Workout</p>
+             			<img id="workout-image" class="mashups-images"  src="/Images/workout.jpg">
+						 <audio id="workout-song" src="/Music/workout.mp3"></audio>
+             			<!-- <p>Workout</p> -->
                 </div>
                 <div class="music-theme-content">
-             			<img src="/Images/retro.jpg">
-             			<p>Retro</p>
+             			<img id="retro-image" class="mashups-images"  src="/Images/retro2.jpg">
+						 <audio id="retro-song" src="/Music/retro.mp3"></audio>
+             			<!-- <p>Retro</p> -->
                 </div>
               
 
@@ -519,9 +523,11 @@
          	</div>
          </div>
          	<div class="music-content-1">
+				 <a href="/users/party-songs">
          		<div class="music-content-2">
          	   <span>Party</span>
          	</div>
+			 </a>
          </div>
             <div class="music-content-1">
          		<div class="music-content-2">
@@ -533,50 +539,7 @@
          </div>
 
 
-         <!-- Songs in English Language -->
-         <div class="latest">
-         	<div class="heading-of-each-part">
-         		<h3 style="margin-left: -1px;">
-         			Latest English
-         		</h3>
-         	</div>
-
-         	<div class="latest-content">
-         		<div>
-         			<img src="/Images/memories.jpg ">
-         			<p>Memories</p>
-         			<p>JAN 12,2020</p>
-         		</div>
-            <div>
-         			<img src="/Images/dusk.jpg">
-         			<p>Dusk Till Dawn</p>
-         			<p>FEB 15,2021</p>
-            </div>
-                 <div>
-         			<img src="/Images/girls.jpg">
-         			<p>Girls Like you</p>
-         			<p>MAY 1,2020</p>
-            </div>
-                <div>
-         			<img src="/Images/baby.png">
-         			<p>Baby</p>
-         			<p>AUG 30,2020</p>
-            </div>
-                <div>
-         			<img src="/Images/sorry.png">
-         			<p>Sorry</p>
-         			<p>NOV 10,2020</p>
-            </div>
-                <div>
-         			<img src="/Images/perfect.jpg">
-         			<p>Perfect</p>
-         			<p>MAR 11,2021</p>
-            </div>
-
-
-         </div>
-     </div>
-
+         
 
      <div class="latest">
           <div class="heading-of-each-part">
@@ -587,7 +550,8 @@
 
           <div class="latest-content">
             <div>
-              <img src="/Images/khabbiseat.jpg">
+              <img id="khabbi-image" src="/Images/khabbiseat.jpg">
+			  <audio id="khabbi-song" src="/Music/khabbi.mp3"></audio>
               <p>Khabbi Seat</p>
               <p>AUG 3,2021</p>
             </div>
@@ -597,17 +561,20 @@
               <p>DEC 15,2020</p>
             </div>
                  <div>
-              <img src="/Images/panidigal.jpg">
+              <img id="pani-image" src="/Images/panidigal.jpg">
+			  <audio id="pani-song" src="/Music/paaani.mp3"></audio>
               <p>Paani di Gaal</p>
               <p>MAR 21,2021</p>
             </div>
                 <div>
-              <img src="/Images/Chitta_Kurta.jpg">
+              <img id="chitta-image" src="/Images/Chitta_Kurta.jpg">
+			  <audio src="/Music/chitta.mp3" id="chitta-song"></audio>
               <p>Chitta Kurta</p>
               <p>OCT 10,2020</p>
             </div>
                 <div>
-              <img src="/Images/sira-e-hou.jpg">
+              <img id="sira-image" src="/Images/sira-e-hou.jpg">
+			  <audio id="sira-song" src="/Music/sira.mp3"></audio>
               <p>Sira E Hou</p>
               <p>NOV 25,2020</p>
             </div>
@@ -657,7 +624,8 @@
          			<p>NOV 4,2020</p>
             </div>
                 <div>
-         			<img src="/Images/paani.jpg">
+         			<img id="paani-image" src="/Images/paani.jpg">
+					 <audio src="/Music/paani.mp3" id="paani-song"></audio>
          			<p>Paani Paani</p>
          			<p>SEP 18,2021</p>
             </div>
@@ -665,6 +633,51 @@
 
          </div>
      </div>
+
+	 <!-- Songs in English Language -->
+	 <div class="latest">
+		<div class="heading-of-each-part">
+			<h3 style="margin-left: -1px;">
+				Latest English
+			</h3>
+		</div>
+
+		<div class="latest-content">
+			<div>
+				<img src="/Images/memories.jpg ">
+				<p>Memories</p>
+				<p>JAN 12,2020</p>
+			</div>
+	   <div>
+				<img src="/Images/dusk.jpg">
+				<p>Dusk Till Dawn</p>
+				<p>FEB 15,2021</p>
+	   </div>
+			<div>
+				<img src="/Images/girls.jpg">
+				<p>Girls Like you</p>
+				<p>MAY 1,2020</p>
+	   </div>
+		   <div>
+				<img src="/Images/peaches.jpg">
+				<p>Peaches</p>
+				<p>AUG 30,2020</p>
+	   </div>
+		   <div>
+				<img src="/Images/sorry.png">
+				<p>Sorry</p>
+				<p>NOV 10,2020</p>
+	   </div>
+		   <div>
+				<img src="/Images/perfect.jpg">
+				<p>Perfect</p>
+				<p>MAR 11,2021</p>
+	   </div>
+
+
+	</div>
+</div>
+
 
 </aside>
 
@@ -1028,13 +1041,13 @@
 	</aside>
     </main>
 
-        <footer>
+        <!-- <footer>
         <div class="active-song-description">
-            <!-- song image -->
+            <!-- song image 
             <div id="song-image">
                 <img src="/Images/brown.jpg">
             </div>
-            <!-- song name and author -->
+            <!-- song name and author 
             <div class="song-desc">
                 <div>
                     Brown Shortie
@@ -1042,7 +1055,7 @@
                 <div>
                     Sidhu Moosewala
                 </div>
-                <!-- heart icon and ban icon -->
+                <!-- heart icon and ban icon 
             </div>
             <div class="heart-and-ban-icon">
                 <span>
@@ -1053,7 +1066,7 @@
                 </span>
             </div>
         </div>
-        <!-- these are the main player controls -->
+        <!-- these are the main player controls 
         <div class="player">
             <div class="controls">
                 <div><i class="fa fa-random"></i></div>
@@ -1062,22 +1075,22 @@
                 <div><i class="fa fa-step-forward"></i></div>
                 <div><i class="fa fa-redo"></i></div>
             </div>
-            <!-- this is the slider -->
+            <!-- this is the slider 
             <div id="slider">
-                <!-- current time -->
+                 current time 
                 <div class="time">
                     1:10
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
                 </div>
-                <!-- total time -->
+                 total time 
                 <div class="time">
                     4:50
                 </div>
             </div>
         </div>
-        <!-- other icons including the volume slider and all -->
+         other icons including the volume slider and all 
         <div class="extras">
             <div>
                 <i class="fa fa-list-ul"></i>
@@ -1095,7 +1108,7 @@
                 <i class="fa fa-expand-alt"></i>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script type="text/javascript" src="/JS/SongQuery.js">
 		

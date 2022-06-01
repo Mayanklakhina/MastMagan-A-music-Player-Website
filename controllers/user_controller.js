@@ -133,3 +133,15 @@ module.exports.ArijitSingh = function(req,res){
 module.exports.Badshah = function(req,res){
     return res.render('badshah');
 }
+
+module.exports.party = function(req,res){
+    return res.render('party');
+}
+
+module.exports.roadtrip = function(req,res){
+    return res.render('roadtrip');
+}
+
+module.exports.electronic = function(req,res){
+    return res.render('electronic');
+}
