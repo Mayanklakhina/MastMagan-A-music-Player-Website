@@ -208,7 +208,77 @@
            paani_audio.pause();
          }
       },false);
+
       
+      var lut_audio = document.getElementById("lut-song");
+      var lut_img = document.getElementById("lut-image");
+
+      document.addEventListener("click", function(e){
+         if( e.target === lut_img ){
+           lut_audio.src = "/Music/lutgaye.mp3";
+           lut_audio.play();
+         }
+         else{
+           lut_audio.pause();
+         }
+      },false);
+
+      
+      
+      var nadiyon_audio = document.getElementById("nadiyon-song");
+      var nadiyon_img = document.getElementById("nadiyon-image");
+
+      document.addEventListener("click", function(e){
+         if( e.target === nadiyon_img ){
+           nadiyon_audio.src = "/Music/nadiyon.mp3";
+           nadiyon_audio.play();
+         }
+         else{
+           nadiyon_audio.pause();
+         }
+      },false);
+      
+      
+      var baithe_audio = document.getElementById("baithe-song");
+      var baithe_img = document.getElementById("baithe-image");
+
+      document.addEventListener("click", function(e){
+         if( e.target === baithe_img ){
+           baithe_audio.src = "/Music/baithe.mp3";
+           baithe_audio.play();
+         }
+         else{
+           baithe_audio.pause();
+         }
+      },false);
+
+      
+      var sorry_audio = document.getElementById("sorry-song");
+      var sorry_img = document.getElementById("sorry-image");
+
+      document.addEventListener("click", function(e){
+         if( e.target === sorry_img ){
+           sorry_audio.src = "/Music/sorry.mp3";
+           sorry_audio.play();
+         }
+         else{
+           sorry_audio.pause();
+         }
+      },false);
+
+      
+      var memories_audio = document.getElementById("memories-song");
+      var memories_img = document.getElementById("memories-image");
+
+      document.addEventListener("click", function(e){
+         if( e.target === memories_img ){
+           memories_audio.src = "/Music/memories.mp3";
+           memories_audio.play();
+         }
+         else{
+           memories_audio.pause();
+         }
+      },false);
 
 
 

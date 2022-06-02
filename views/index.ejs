@@ -77,12 +77,12 @@
             
                 <ul class="name">
                     <% if(locals.user){%>
-                      <li>
+                      <li class="user-name">
                           <a href="/users/profile">
                               <%= user.name %>
                           </a>
                       </li>
-                      <li>
+                      <li class="sign-out-button" >
                       <a href="/users/sign-out">Sign-out</a>
                       </li>
                     <% }else{%>
@@ -604,12 +604,14 @@
          			<p>JAN 22,2020</p>
             </div>
             <div>
-         			<img src="/Images/baithe.jpg">
+         			<img id="baithe-image" src="/Images/baithe.jpg">
+					 <audio src="/Music/baithe.mp3" id="baithe-song"></audio>
          			<p>Baithe Baithe</p>
          			<p>FEB 25,2021</p>
             </div>
                  <div>
-         			<img src="/Images/lutgaye.jpg">
+         			<img id="lut-image" src="/Images/lutgaye.jpg">
+					 <audio src="/Music/lutgaye.mp3" id="lut-song"></audio>
          			<p>Lut Gaye</p>
          			<p>MAY 17,2020</p>
             </div>
@@ -619,7 +621,8 @@
          			<p>AUG 10,2021</p>
             </div>
                 <div>
-         			<img src="/Images/nadiyon.jpg">
+         			<img id="nadiyon-image" src="/Images/nadiyon.jpg">
+					 <audio src="/Music/nadiyon.mp3" id="nadiyon-song"></audio>
          			<p>Nadiyon Paar</p>
          			<p>NOV 4,2020</p>
             </div>
@@ -644,7 +647,8 @@
 
 		<div class="latest-content">
 			<div>
-				<img src="/Images/memories.jpg ">
+				<img id="memories-image" src="/Images/memories.jpg ">
+				<audio src="/Music/memories.mp3" id="memories-song"></audio>
 				<p>Memories</p>
 				<p>JAN 12,2020</p>
 			</div>
@@ -664,7 +668,8 @@
 				<p>AUG 30,2020</p>
 	   </div>
 		   <div>
-				<img src="/Images/sorry.png">
+				<img id="sorry-image" src="/Images/sorry.png">
+				<audio src="/Music/sorry.mp3" id="sorry-song"></audio>
 				<p>Sorry</p>
 				<p>NOV 10,2020</p>
 	   </div>
@@ -1040,14 +1045,13 @@
 
 	</aside>
     </main>
-
-        <!-- <footer>
+        <footer>
         <div class="active-song-description">
-            <!-- song image 
+            <!-- song image--> 
             <div id="song-image">
                 <img src="/Images/brown.jpg">
             </div>
-            <!-- song name and author 
+            <!-- song name and author -->
             <div class="song-desc">
                 <div>
                     Brown Shortie
@@ -1055,7 +1059,7 @@
                 <div>
                     Sidhu Moosewala
                 </div>
-                <!-- heart icon and ban icon 
+                <!-- heart icon and ban icon -->
             </div>
             <div class="heart-and-ban-icon">
                 <span>
@@ -1066,31 +1070,31 @@
                 </span>
             </div>
         </div>
-        <!-- these are the main player controls 
+        <!-- these are the main player controls -->
         <div class="player">
             <div class="controls">
                 <div><i class="fa fa-random"></i></div>
                 <div><i class="fa fa-step-backward"></i></div>
-                <div><i class="fa fa-pause-circle"></i></div>
+                <div><i class="fa fa-pause-circle" id="play"></i></div>
                 <div><i class="fa fa-step-forward"></i></div>
                 <div><i class="fa fa-redo"></i></div>
             </div>
-            <!-- this is the slider 
+            <!-- this is the slider -->
             <div id="slider">
-                 current time 
+                 <!--current time--> 
                 <div class="time">
                     1:10
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
                 </div>
-                 total time 
+                 <!--total time--> 
                 <div class="time">
                     4:50
                 </div>
             </div>
         </div>
-         other icons including the volume slider and all 
+         <!--other icons including the volume slider and all -->
         <div class="extras">
             <div>
                 <i class="fa fa-list-ul"></i>
@@ -1108,7 +1112,7 @@
                 <i class="fa fa-expand-alt"></i>
             </div>
         </div>
-    </footer> -->
+    </footer> 
 
     <script type="text/javascript" src="/JS/SongQuery.js">
 		

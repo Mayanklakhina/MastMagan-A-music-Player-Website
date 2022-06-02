@@ -16,7 +16,7 @@ let songs = [
     {songName: "Kar Gayi Chull - Badshah, Sukriti Kakkar", filePath:"/Music/4.mp3", coverPath: "/Images/4.jpg"},
     {songName: "Aaj ki Raat - Sonu Nigam, Alisha Chinai", filePath:"/Music/5.mp3", coverPath: "/Images/5.jpg"},
     {songName: "Disco Disco - Benny Dayal, Shirley Setia", filePath:"/Music/6.mp3", coverPath: "/Images/6.jpg"},
-    {songName: "3 Peg - Diljit Dosanjh", filePath:"/Music/6.mp3", coverPath: "/Images/7.jpg"},
+    {songName: "3 Peg - Sharry Maan", filePath:"/Music/6.mp3", coverPath: "/Images/3 peg.jpg"},
     {songName: "Paani Paani - Badshah, Aastha Gill", filePath:"/Music/paani.mp3", coverPath: "/Images/paani.jpg"},
     {songName: "Lehanga - Jass Manak", filePath:"/Music/2.mp3", coverPath: "/Images/lehanga.jpg"},
     {songName: "Brown Munde - AP Dhillon", filePath:"/Music/4.mp3", coverPath: "/Images/brown.jpg"},
