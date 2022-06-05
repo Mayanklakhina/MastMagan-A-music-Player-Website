@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/musicplayer_development');
+mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
 

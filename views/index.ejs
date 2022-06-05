@@ -78,12 +78,12 @@
                 <ul class="name">
                     <% if(locals.user){%>
                       <li class="user-name">
-                          <a href="/users/profile">
+                          <a href="/users/profile" id="anchor">
                               <%= user.name %>
                           </a>
                       </li>
                       <li class="sign-out-button" >
-                      <a href="/users/sign-out">Sign-out</a>
+                      <a href="/users/sign-out" id="anchor-2">Sign-out</a>
                       </li>
                     <% }else{%>
                         <li>

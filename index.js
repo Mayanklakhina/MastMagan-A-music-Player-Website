@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const port = process.env.PORT||8000;
 const db = require('./configuration/mongoose');
 const session=require('express-session');
 const passport = require('passport');
@@ -14,6 +14,8 @@ const customMware= require('./configuration/middleware');
 
 app.set('view engine','ejs');
 app.set('views','./views');
+
+
 app.use(express.static('./assets'));
 
   app.use(session({
@@ -28,7 +30,7 @@ app.use(express.static('./assets'));
     },
     store: MongoStore.create(
         {
-            mongoUrl: 'mongodb://localhost/musicplayer_development',
+            mongoUrl: process.env.DB_URL,
             autoRemove: 'disabled'
         }, function(err){
             console.log(err || 'connect-mongodb setup ok');

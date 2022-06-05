@@ -986,12 +986,21 @@
     color: white;
     vertical-align: middle;
     margin-top:30px;
+    font-weight: bold;
 }
-.name .username a{
-    background-color: red;
-    height:2vh;
-    width:90px;
+/* #anchor{
+    color:rgb(118, 226, 118);
 }
+#anchor-2{
+    color:rgb(240, 72, 72);
+} */
+#anchor:hover{
+    color: rgb(85, 185, 85);
+}
+#anchor-2:hover{
+    color:rgb(161, 63, 63);
+}
+
   .username {
 	/* background: #408a43; */
 	border-radius: 0.3rem;
